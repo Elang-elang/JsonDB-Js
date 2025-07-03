@@ -1,4 +1,4 @@
-# JsonDB-Simple
+# jsondb-node
 
 A simple, file-based JSON database manager accessible from the command line. This tool allows you to perform CRUD (Create, Read, Update, Delete) operations on JSON files using an interactive REPL, with commands inspired by SQL.
 
@@ -11,13 +11,13 @@ A simple, file-based JSON database manager accessible from the command line. Thi
 
 ## Installation
 
-To install `JsonDB-Simple` globally, run the following command:
+To install `jsondb-node` globally, run the following command:
 
 ```bash
-npm install @elang_muhammad/json-db-js
+npm install @elang_muhammad/jsondb-node
 ```
 
-Make sure you are in the `JsonDB-Simple` directory when you run this command.
+Make sure you are in the `jsondb-node` directory when you run this command.
 
 ## Usage
 
@@ -59,15 +59,15 @@ $ jsondb
 
 ## Library Usage
 
-In addition to the interactive REPL, you can use `JsonDB-Simple` as a Node.js module in your projects.
+In addition to the interactive REPL, you can use `jsondb-node` as a Node.js module in your projects.
 
 ### Importing
 You can import the `JsonDB` class into your JavaScript file like this:
 
 ```javascript
-import { JsonDB } from '@elang_muhammad/json-db-js';
+import { JsonDB } from 'jsondb-node';
 // Or using require
-// const { JsonDB } = require('@elang_muhammad/json-db-js');
+// const { JsonDB } = require('jsondb-node');
 ```
 
 ### Example Usage
@@ -75,7 +75,7 @@ import { JsonDB } from '@elang_muhammad/json-db-js';
 Here is a basic example of how to use the library:
 
 ```javascript
-import { JsonDB } from '@elang_muhammad/json-db-js';
+import { JsonDB } from 'jsondb-node';
 
 // 1. Initialize the database
 const db = new JsonDB('my_database.json');

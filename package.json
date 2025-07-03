@@ -1,11 +1,11 @@
 {
-  "name": "@elang_muhammad/json-db-js",
-  "version": "1.0.5",
+  "name": "@elang_muhammad/jsondb-node",
+  "version": "1.0.6",
   "description": "A simple JSON database manager that allows you to interact with JSON files through a command-line interface, inspired by SQL-like commands.",
-  "main": "lib/Json.js",
+  "main": "./lib/Json.js",
   "author": "Elang Muhammad",
   "bin": {
-    "jsondb": "bin/jsondb"
+    "jsondb": "./bin/jsondb"
   },
   "keywords": [
     "json",
