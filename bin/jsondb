@@ -4,7 +4,7 @@ const { spawn } = require('child_process');
 const path = require('path');
 
 // Path ke skrip Python di dalam paket
-const pythonScript = path.resolve(__dirname, '../repl.py');
+const pythonScript = path.resolve(__dirname, './module/repl.py');
 
 // Ambil semua argumen yang diberikan ke skrip ini, kecuali dua yang pertama ('node' dan path ke skrip itu sendiri)
 const args = process.argv.slice(2);
