@@ -1,1 +1,23 @@
+#!/usr/bin/env node
 
+const { spawn } = require('child_process');
+const path = require('path');
+
+// Path ke skrip Python di dalam paket
+const pythonScript = path.resolve(__dirname, '../repl.py');
+
+// Ambil semua argumen yang diberikan ke skrip ini, kecuali dua yang pertama ('node' dan path ke skrip itu sendiri)
+const args = process.argv.slice(2);
+
+// Jalankan skrip Python
+const py = spawn('python', [pythonScript, ...args], {
+    stdio: 'inherit' // Ini akan menghubungkan stdin, stdout, dan stderr dari proses anak ke proses utama
+});
+
+py.on('close', (code) => {
+    // console.log(`Proses Python ditutup dengan kode: ${code}`);
+});
+
+py.on('error', (err) => {
+    console.error('Gagal menjalankan skrip Python:', err);
+});
